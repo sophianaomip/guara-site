@@ -1,0 +1,485 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Tela Inicial de Carregamento */
+.initial-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000; /* Garante que fique por cima de tudo */
+    transition: transform 0.8s ease-out; /* Transição para esconder */
+}
+
+.initial-screen.hidden {
+    transform: translateY(-100%); /* Desliza para cima para esconder */
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: #ff5722; /* Cor de exemplo para o logo */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    /* Adicione uma imagem real de logo aqui futuramente */
+}
+
+.initial-screen h1 {
+    font-size: 3em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.scroll-down-arrow {
+    font-size: 4em;
+    color: #ff5722;
+    cursor: pointer;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+/* Conteúdo Principal */
+.main-content {
+    opacity: 0;
+    transform: translateY(100vh); /* Esconde o conteúdo inicialmente */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.main-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder-small {
+    width: 40px;
+    height: 40px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 0.9em;
+    outline: none;
+}
+
+.main-nav button {
+    background-color: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    transition: background-color 0.3s;
+}
+
+.main-nav button:hover {
+    background-color: #ddd;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0 20px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Seção de Propaganda (Carrossel) */
+.propaganda-section {
+    background-color: #ffe0b2;
+    padding: 0; /* Remove padding para a imagem ocupar a borda */
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ffcc80;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%; /* Ocupa toda a largura */
+    max-width: none; /* Remove o max-width */
+    margin: 0 auto; /* Ajusta a margem para ficar sem bordas laterais */
+    overflow: hidden;
+    border-radius: 0; /* Remove border-radius para ocupar a borda */
+    box-shadow: none; /* Remove sombra para não ter bordas visíveis */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 0; /* Remove border-radius */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    height: 400px; /* Altura fixa para a propaganda, ajuste conforme necessário */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 2em;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.store-slogan {
+    font-size: 1.3em;
+    color: #e67e22;
+    margin-top: 20px; /* Aumenta margem para separar da propaganda */
+    margin-bottom: 20px;
+}
+
+/* Seção de Categorias (4 quadrados grandes) */
+.product-categories {
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 1200px; /* Define largura máxima para a grade */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-grid.four-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 30px; /* Aumenta o espaçamento */
+}
+
+.category-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px; /* Aumenta o padding para deixá-los maiores */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-8px); /* Efeito de hover mais pronunciado */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.category-item p {
+    font-size: 1.8em; /* Aumenta o tamanho do texto */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.category-image-placeholder {
+    width: 100%;
+    padding-top: 70%; /* Proporção quase quadrada para as imagens */
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-top: 15px; /* Espaçamento entre texto e imagem */
+}
+
+/* Seção de Novidades (Carrossel) */
+.news-section {
+    padding: 20px;
+    background-color: #e8f5e9; /* Cor de fundo suave para novidades */
+    margin-bottom: 40px;
+    border-top: 1px solid #c8e6c9;
+    border-bottom: 1px solid #c8e6c9;
+}
+
+/* Carrossel de Novidades */
+#newsCarousel .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 10px 0; /* Espaçamento interno */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+#newsCarousel .carousel-item {
+    min-width: calc(25% - 15px); /* 4 itens por vez, ajustado para gap */
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#newsCarousel .carousel-item img {
+    width: 100%;
+    height: 150px; /* Altura fixa para as imagens de novidade */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+#newsCarousel .carousel-item p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#newsCarousel .carousel-item a {
+    display: inline-block;
+    background-color: #4CAF50; /* Verde para link de novidade */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#newsCarousel .carousel-item a:hover {
+    background-color: #45a049;
+}
+
+
+/* Seção de Mais Vendidos */
+.bestsellers-section {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.bestseller-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adaptação para 3-4 itens por linha */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bestseller-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestseller-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.bestseller-item p {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.bestseller-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.bestseller-item button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .category-grid.four-items {
+        grid-template-columns: 1fr; /* Em telas menores, 1 coluna para os 4 itens */
+    }
+    .category-item {
+        padding: 20px;
+        font-size: 1.5em;
+    }
+    #newsCarousel .carousel-item {
+        min-width: calc(33.33% - 13.33px); /* 3 itens por vez */
+    }
+}
+
+@media (max-width: 768px) {
+    .initial-screen h1 {
+        font-size: 2.5em;
+    }
+    .scroll-down-arrow {
+        font-size: 3.5em;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-nav {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+    .main-nav input[type="text"] {
+        flex-grow: 1;
+        margin-right: 5px;
+    }
+    .carousel-container {
+        width: 100%; /* Permanece 100% */
+    }
+    .carousel-item img {
+        height: 300px; /* Ajusta altura da propaganda em telas menores */
+    }
+    #newsCarousel .carousel-item {
+        min-width: calc(50% - 10px); /* 2 itens por vez */
+    }
+    .bestseller-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 ou 3 colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .initial-screen h1 {
+        font-size: 2em;
+    }
+    .logo-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    .scroll-down-arrow {
+        font-size: 3em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .store-slogan {
+        font-size: 1.1em;
+    }
+    .category-item {
+        padding: 15px;
+        font-size: 1.3em;
+    }
+    .carousel-item img {
+        height: 200px; /* Ajusta altura da propaganda em telas muito pequenas */
+    }
+    .bestseller-grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+    #newsCarousel .carousel-item {
+        min-width: 90%; /* 1 item por vez */
+    }
+}
