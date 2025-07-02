@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    background-color: #2b1304;
     color: #333;
     overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
@@ -20,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: rgb(255, 193, 78);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,14 +50,14 @@ body {
 
 .initial-screen h1 {
     font-size: 3em;
-    color: #333;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .scroll-down-arrow {
     font-size: 4em;
-    color: #ff5722;
+    color: #fef9ff;
     cursor: pointer;
     animation: bounce 1s infinite alternate;
 }
@@ -80,13 +80,13 @@ body {
 }
 
 .header {
-    background-color: #fff;
+    background-color: #ffba61;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -104,7 +104,7 @@ body {
 
 .logo h1 {
     font-size: 1.5em;
-    color: #333;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -115,7 +115,7 @@ body {
 
 .main-nav input[type="text"] {
     padding: 8px 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #bb7400;
     border-radius: 20px;
     margin-right: 10px;
     font-size: 0.9em;
@@ -123,13 +123,13 @@ body {
 }
 
 .main-nav button {
-    background-color: #eee;
+    background-color: #696161;
     border: none;
     padding: 8px 12px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 1em;
-    color: #555;
+    color: #ff2020;
     transition: background-color 0.3s;
 }
 
@@ -159,18 +159,18 @@ body {
     text-align: center;
     font-size: 2.5em;
     margin: 40px 0 20px;
-    color: #555;
+    color: #c34c4c;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 /* Seção de Propaganda (Carrossel) */
 .propaganda-section {
-    background-color: #ffe0b2; /* A cor laranja que a imagem da propaganda deve cobrir */
+    background-color: #510a0a; /* A cor laranja que a imagem da propaganda deve cobrir */
     padding: 0; /* Remove padding para a imagem ocupar a borda */
     text-align: center;
     margin-bottom: 40px;
-    border-bottom: 2px solid #ffcc80;
+    border-bottom: 2px solid #000000;
 }
 
 .carousel-container {
@@ -205,8 +205,8 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
+    background-color: rgba(255, 3, 3, 0.5);
+    color: rgb(255, 255, 255);
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -230,7 +230,7 @@ body {
 
 .store-slogan {
     font-size: 1.3em;
-    color: #e67e22;
+    color: #f5ac71;
     margin-top: 20px; /* Aumenta margem para separar da propaganda */
     margin-bottom: 20px;
 }
@@ -251,12 +251,12 @@ body {
 }
 
 .category-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #faf3e4;
+    border: 1px solid #d7d3d3;
     border-radius: 10px;
     padding: 30px; /* Aumenta o padding para deixá-los maiores */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -270,13 +270,13 @@ body {
     font-size: 1.8em; /* Aumenta o tamanho do texto */
     font-weight: bold;
     margin-bottom: 15px;
-    color: #555;
+    color: #ce8d00;
 }
 
 .category-image-placeholder {
     width: 100%;
     padding-top: 70%; /* Proporção quase quadrada para as imagens */
-    background-color: #e0e0e0;
+    background-color: #edecec;
     border-radius: 8px;
     margin-top: 15px; /* Espaçamento entre texto e imagem */
 }
@@ -284,10 +284,10 @@ body {
 /* Seção de Novidades (Carrossel) */
 .news-section {
     padding: 20px;
-    background-color: #e8f5e9; /* Cor de fundo suave para novidades */
+    background-color: #f6bea7; /* Cor de fundo suave para novidades */
     margin-bottom: 40px;
-    border-top: 1px solid #c8e6c9;
-    border-bottom: 1px solid #c8e6c9;
+    border-top: 1px solid #b55b46;
+    border-bottom: 1px solid #b55b46;
 }
 
 /* Carrossel de Novidades */
@@ -302,7 +302,7 @@ body {
     min-width: calc(25% - 15px); /* 4 itens por vez, ajustado para gap */
     box-sizing: border-box;
     padding: 15px;
-    background-color: #fff;
+    background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
@@ -320,12 +320,12 @@ body {
 #newsCarousel .carousel-item p {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    color: #820000;
 }
 
 #newsCarousel .carousel-item a {
     display: inline-block;
-    background-color: #4CAF50; /* Verde para link de novidade */
+    background-color: #b55b46 ; 
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -335,7 +335,7 @@ body {
 }
 
 #newsCarousel .carousel-item a:hover {
-    background-color: #45a049;
+    background-color: #eea382;
 }
 
 
@@ -372,7 +372,7 @@ body {
 .bestseller-item .bestseller-price {
     font-size: 2em; /* Letra grande para o preço */
     font-weight: bold;
-    color: #d35400; /* Cor para destacar o preço */
+    color: #ff6f0f; /* Cor para destacar o preço */
     margin-bottom: 15px;
 }
 
@@ -410,7 +410,7 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #240202;
     color: white;
     margin-top: 20px;
     font-size: 0.9em;
