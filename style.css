@@ -350,10 +350,10 @@ body {
     margin-bottom: 40px;
 }
 
-.bestseller-grid {
+.bestseller-grid.large-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adaptação para 3-4 itens por linha */
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para 4 itens grandes */
+    gap: 30px; /* Aumenta o espaçamento */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -362,7 +362,7 @@ body {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 15px;
+    padding: 30px; /* Aumenta o padding para deixá-los maiores */
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     cursor: pointer;
@@ -370,24 +370,40 @@ body {
 }
 
 .bestseller-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transform: translateY(-8px); /* Efeito de hover mais pronunciado */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.bestseller-item p {
-    margin-bottom: 5px;
-    font-size: 1.1em;
+.bestseller-item .bestseller-price {
+    font-size: 2em; /* Letra grande para o preço */
+    font-weight: bold;
+    color: #d35400; /* Cor para destacar o preço */
+    margin-bottom: 15px;
+}
+
+.product-image-placeholder-large {
+    width: 100%;
+    padding-top: 70%; /* Proporção quase quadrada para as imagens */
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.bestseller-item .bestseller-heart {
+    font-size: 1.5em; /* Tamanho do coração */
+    color: #e74c3c; /* Cor do coração */
+    margin-bottom: 15px;
 }
 
 .bestseller-item button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 12px 25px; /* Aumenta o botão */
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-size: 0.95em;
+    font-size: 1.1em; /* Aumenta a fonte do botão */
     transition: background-color 0.3s;
 }
 
@@ -406,11 +422,16 @@ footer {
 
 /* Responsividade */
 @media (max-width: 992px) {
-    .category-grid.four-items {
-        grid-template-columns: 1fr; /* Em telas menores, 1 coluna para os 4 itens */
+    .category-grid.four-items,
+    .bestseller-grid.large-items {
+        grid-template-columns: 1fr; /* Em telas menores, 1 coluna para os itens grandes */
     }
-    .category-item {
+    .category-item,
+    .bestseller-item {
         padding: 20px;
+    }
+    .category-item p,
+    .bestseller-item .bestseller-price {
         font-size: 1.5em;
     }
     #newsCarousel .carousel-item {
@@ -438,17 +459,11 @@ footer {
         flex-grow: 1;
         margin-right: 5px;
     }
-    .carousel-container {
-        width: 100%; /* Permanece 100% */
-    }
     .carousel-item img {
         height: 300px; /* Ajusta altura da propaganda em telas menores */
     }
     #newsCarousel .carousel-item {
         min-width: calc(50% - 10px); /* 2 itens por vez */
-    }
-    .bestseller-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 ou 3 colunas */
     }
 }
 
@@ -469,15 +484,11 @@ footer {
     .store-slogan {
         font-size: 1.1em;
     }
-    .category-item {
-        padding: 15px;
-        font-size: 1.3em;
-    }
     .carousel-item img {
         height: 200px; /* Ajusta altura da propaganda em telas muito pequenas */
     }
-    .bestseller-grid {
-        grid-template-columns: 1fr; /* 1 coluna */
+    .bestseller-item .bestseller-price {
+        font-size: 1.7em;
     }
     #newsCarousel .carousel-item {
         min-width: 90%; /* 1 item por vez */

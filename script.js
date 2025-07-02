@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = 0;
             }
 
-
             const totalItemWidth = items[0].offsetWidth + (parseFloat(getComputedStyle(track).gap) || 0);
+
             // Para o carrossel de propaganda, o cálculo é mais simples (1 item por vez)
             // Para o carrossel de notícias, precisamos do totalItemWidth e do número de itens para calcular o deslocamento
             let transformValue;
