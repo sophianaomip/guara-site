@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f6aa4d72;
+    background-color: #c7a1857f;
     color: #333;
     overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
@@ -80,12 +80,12 @@ body {
 }
 
 .header {
-    background-color: #f5a463;
+    background-color: #ff7e14;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f58e3a;
+    border-bottom: 1px solid #ff780a;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
 }
 
@@ -159,7 +159,7 @@ body {
     text-align: center;
     font-size: 2.5em;
     margin: 0px 0 0px;
-    color: #555;
+    color: #3b2000;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -250,13 +250,6 @@ body {
 }
 
 .category-item {
-    background-color: #b87200;
-    border: none; /* Remove a borda do item */
-    border-radius: 15px; /* Bordas arredondadas para o quadrado */
-    padding: 20px; /* Padding interno */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(242, 240, 240, 0.08);
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative; /* Para posicionar o nome */
     overflow: hidden; /* Garante que a imagem arredondada se encaixe */
@@ -269,7 +262,7 @@ body {
 
 .category-actual-image {
     width: 100%;
-    height: 250px; /* Altura fixa para a imagem da categoria */
+    height: 500px; /* Altura fixa para a imagem da categoria */
     object-fit: cover; /* Garante que a imagem preencha sem distorcer */
     border-radius: 10px; /* Bordas arredondadas para a imagem */
     display: block;
@@ -297,10 +290,10 @@ body {
 /* Seção de Novidades (Carrossel - 6 retângulos) */
 .news-section {
     padding: 20px;
-    background-color: #e8f5e9; /* Cor de fundo suave para novidades */
+    background-color: #fff6e4; /* Cor de fundo suave para novidades */
     margin-bottom: 40px;
-    border-top: 1px solid #c8e6c9;
-    border-bottom: 1px solid #c8e6c9;
+    border-top: 1px solid #e6dcc8;
+    border-bottom: 1px solid #e6dcc8;
 }
 
 #newsCarousel .carousel-track {
@@ -361,7 +354,7 @@ body {
 
 .news-button {
     display: inline-block;
-    background-color: #4CAF50; /* Verde para link de novidade */
+    background-color: #af864c; /* Verde para link de novidade */
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -374,7 +367,7 @@ body {
 }
 
 .news-button:hover {
-    background-color: #45a049;
+    background-color: #a07f45;
 }
 
 
@@ -434,7 +427,7 @@ body {
 }
 
 .bestseller-item button {
-    background-color: #007bff;
+    background-color: #db6d00;
     color: white;
     border: none;
     padding: 12px 25px; /* Aumenta o botão */
@@ -446,13 +439,13 @@ body {
 }
 
 .bestseller-item button:hover {
-    background-color: #0056b3;
+    background-color: #b36800;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #9c4100;
     color: white;
     margin-top: 20px;
     font-size: 0.9em;
