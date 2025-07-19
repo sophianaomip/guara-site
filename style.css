@@ -8,7 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #c7a1857f;
+   background-image: linear-gradient(#feeaf0 #f09410);
     color: #333;
     overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
